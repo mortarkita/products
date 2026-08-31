@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,9 +10,9 @@
 
 <style>
 
-/* =====================================================
+/* ==========================================
    RESET
-===================================================== */
+========================================== */
 
 *{
     margin:0;
@@ -29,1337 +31,2155 @@ body{
     overflow-x:hidden;
 }
 
-/* =====================================================
-   WARNA BRAND
-===================================================== */
+
+/* ==========================================
+   WARNA BRAND MORTAR KITA
+========================================== */
 
 :root{
+
     --dark:#34393C;
     --orange:#F16022;
     --gray:#727377;
-    --light:#f5f5f5;
+
     --white:#ffffff;
+    --light:#f6f6f6;
+
 }
 
-/* =====================================================
+
+/* ==========================================
    CONTAINER
-===================================================== */
+========================================== */
 
 .container{
+
     width:90%;
-    max-width:1250px;
+    max-width:1280px;
     margin:auto;
+
 }
 
-/* =====================================================
+
+/* ==========================================
    HEADER
-===================================================== */
+========================================== */
 
 header{
+
+    height:90px;
     background:var(--dark);
+
     position:sticky;
     top:0;
-    z-index:999;
-    box-shadow:0 2px 10px rgba(0,0,0,.2);
+
+    z-index:1000;
+
+    box-shadow:
+    0 2px 15px rgba(0,0,0,.15);
+
 }
 
+
 .navbar{
+
     height:90px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
 }
 
-/* LOGO */
 
-.logo{
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo-box{
+
+    width:230px;
+    height:120px;
+
+    margin-top:30px;
+
     background:#ffffff;
-    width:220px;
-    height:115px;
-    margin-top:25px;
+
     border-radius:10px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+    padding:15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.2);
+
 }
 
-.logo-text{
-    font-size:28px;
-    font-weight:900;
-    font-style:italic;
-    line-height:25px;
-    text-align:center;
-    color:var(--dark);
+
+.logo-box img{
+
+    width:100%;
+    max-height:90px;
+
+    object-fit:contain;
+
 }
 
-.logo-text span{
-    color:var(--orange);
-}
 
-/* MENU */
+/* ==========================================
+   NAVIGATION
+========================================== */
 
 .nav-menu{
+
     display:flex;
     gap:35px;
-    margin-left:50px;
+
+    margin-left:40px;
+
 }
 
+
 .nav-menu a{
-    text-decoration:none;
+
     color:#ffffff;
-    font-size:14px;
+
+    text-decoration:none;
+
+    font-size:13px;
+
     font-weight:bold;
-    letter-spacing:.5px;
+
+    letter-spacing:.4px;
+
     transition:.3s;
+
 }
+
 
 .nav-menu a:hover,
 .nav-menu a.active{
+
     color:var(--orange);
+
 }
 
-/* BUTTON */
+
+/* ==========================================
+   CONTACT BUTTON
+========================================== */
 
 .btn-contact{
+
     background:var(--orange);
-    color:white;
-    padding:14px 25px;
-    border-radius:5px;
+
+    color:#ffffff;
+
+    padding:14px 24px;
+
     text-decoration:none;
-    font-size:14px;
+
+    border-radius:5px;
+
+    font-size:13px;
+
     font-weight:bold;
-    box-shadow:0 4px 10px rgba(241,96,34,.3);
+
+    transition:.3s;
+
 }
 
-/* MOBILE MENU */
+
+.btn-contact:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 6px 15px rgba(241,96,34,.35);
+
+}
+
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
 
 .menu-toggle{
+
     display:none;
+
+    color:#ffffff;
+
     font-size:28px;
-    color:white;
+
     cursor:pointer;
+
 }
 
-/* =====================================================
+
+/* ==========================================
    HERO
-===================================================== */
+========================================== */
 
 .hero{
-    min-height:560px;
+
+    min-height:570px;
+
     display:flex;
     align-items:center;
-    position:relative;
+
     background:
+
     linear-gradient(
+
         90deg,
+
         rgba(255,255,255,.98) 0%,
-        rgba(255,255,255,.92) 40%,
-        rgba(255,255,255,.15) 100%
+
+        rgba(255,255,255,.94) 42%,
+
+        rgba(255,255,255,.20) 100%
+
     ),
-    url('produk/hero.jpg');
+
+    url("background/hero.jpg");
 
     background-size:cover;
+
     background-position:center;
+
 }
+
 
 .hero-content{
-    width:52%;
-    padding:70px 0;
+
+    width:55%;
+
+    padding:80px 0;
+
 }
+
 
 .hero-subtitle{
+
     color:var(--orange);
+
     font-weight:bold;
+
     letter-spacing:1px;
-    margin-bottom:10px;
+
+    margin-bottom:15px;
+
     font-size:16px;
+
 }
+
 
 .hero h1{
+
     font-size:60px;
+
     line-height:1.05;
-    margin-bottom:20px;
+
     font-weight:900;
-    color:var(--dark);
+
+    margin-bottom:25px;
+
 }
+
 
 .hero h1 span{
+
     color:var(--orange);
+
 }
+
 
 .hero-description{
-    max-width:500px;
+
+    max-width:520px;
+
     color:#555;
+
     line-height:1.7;
-    margin-bottom:30px;
-    font-size:17px;
+
+    font-size:16px;
+
+    margin-bottom:35px;
+
 }
 
-/* FEATURES HERO */
+
+/* ==========================================
+   HERO FEATURES
+========================================== */
 
 .hero-features{
+
     display:flex;
-    gap:30px;
+
+    gap:25px;
+
     margin-bottom:35px;
+
 }
+
 
 .feature-mini{
-    display:flex;
-    gap:12px;
+
     width:33%;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
 }
 
-.feature-mini .icon{
-    font-size:35px;
-    color:var(--dark);
+
+.feature-mini img{
+
+    width:38px;
+
+    height:38px;
+
+    object-fit:contain;
+
 }
+
 
 .feature-mini h4{
-    font-size:14px;
+
+    font-size:13px;
+
     margin-bottom:5px;
+
 }
+
 
 .feature-mini p{
-    font-size:12px;
-    color:#666;
+
+    font-size:11px;
+
     line-height:1.5;
+
+    color:#666;
+
 }
 
-/* HERO BUTTON */
+
+/* ==========================================
+   BUTTON
+========================================== */
 
 .hero-buttons{
+
     display:flex;
+
     gap:15px;
+
 }
+
 
 .btn-primary{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
+
     background:var(--orange);
-    color:white;
-    text-decoration:none;
+
+    color:#ffffff;
+
     padding:15px 25px;
+
+    text-decoration:none;
+
     border-radius:5px;
+
     font-weight:bold;
+
+    font-size:13px;
+
     transition:.3s;
+
 }
+
 
 .btn-primary:hover{
-    background:#d94e16;
+
+    background:#d94f16;
+
     transform:translateY(-2px);
+
 }
+
 
 .btn-outline{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
+
     border:2px solid var(--dark);
+
     color:var(--dark);
-    text-decoration:none;
+
     padding:13px 23px;
+
+    text-decoration:none;
+
     border-radius:5px;
+
     font-weight:bold;
+
+    font-size:13px;
+
     transition:.3s;
+
 }
+
 
 .btn-outline:hover{
+
     background:var(--dark);
-    color:white;
+
+    color:#ffffff;
+
 }
 
-/* =====================================================
-   HERO IMAGE FALLBACK
-===================================================== */
 
-.hero-image-mobile{
-    display:none;
-}
-
-/* =====================================================
+/* ==========================================
    BENEFIT BAR
-===================================================== */
+========================================== */
 
 .benefit-bar{
+
     background:var(--dark);
-    color:white;
+
     padding:28px 0;
+
+    color:#ffffff;
+
 }
+
 
 .benefit-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:30px;
+
 }
+
 
 .benefit-item{
+
     display:flex;
+
     align-items:center;
+
     gap:18px;
+
 }
 
-.benefit-icon{
-    font-size:38px;
-    color:var(--orange);
+
+.benefit-item img{
+
+    width:45px;
+
+    height:45px;
+
+    object-fit:contain;
+
 }
+
 
 .benefit-item h3{
-    font-size:14px;
+
+    font-size:13px;
+
     margin-bottom:7px;
+
 }
+
 
 .benefit-item p{
-    font-size:12px;
+
     color:#cccccc;
+
+    font-size:11px;
+
     line-height:1.5;
+
 }
 
-/* =====================================================
-   PRODUCT SECTION
-===================================================== */
+
+/* ==========================================
+   PRODUCT
+========================================== */
 
 .products{
-    padding:70px 0;
-    background:#f7f7f7;
+
+    padding:80px 0;
+
+    background:#f6f6f6;
+
 }
+
 
 .section-title{
+
     text-align:center;
+
     margin-bottom:45px;
+
 }
+
 
 .section-title h2{
+
     font-size:30px;
+
     font-weight:900;
+
 }
+
 
 .section-title span{
+
     color:var(--orange);
+
 }
+
 
 .section-line{
-    width:70px;
+
+    width:65px;
+
     height:3px;
+
     background:var(--orange);
+
     margin:12px auto;
+
 }
 
-/* PRODUCT GRID */
+
+/* ==========================================
+   PRODUCT GRID
+========================================== */
 
 .product-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:22px;
+
 }
+
+
+/* ==========================================
+   PRODUCT CARD
+========================================== */
 
 .product-card{
-    background:white;
+
+    background:#ffffff;
+
     border-radius:8px;
+
     overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+
     transition:.3s;
+
 }
+
 
 .product-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transform:
+    translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+
 }
+
+
+/* ==========================================
+   PRODUCT IMAGE
+========================================== */
 
 .product-image{
-    height:220px;
-    background:#e8e8e8;
+
+    height:230px;
+
+    background:#eeeeee;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     overflow:hidden;
+
 }
+
 
 .product-image img{
+
     width:100%;
+
     height:100%;
+
     object-fit:contain;
-    padding:10px;
+
+    padding:12px;
+
 }
 
-/* PLACEHOLDER */
+
+/* ==========================================
+   IMAGE PLACEHOLDER
+========================================== */
 
 .image-placeholder{
-    color:#999;
+
     text-align:center;
+
+    color:#999;
+
     font-size:13px;
-    padding:20px;
+
+    line-height:1.6;
+
 }
+
+
+/* ==========================================
+   PRODUCT INFO
+========================================== */
 
 .product-info{
+
     padding:20px;
+
 }
+
 
 .product-info h3{
-    font-size:17px;
+
+    font-size:16px;
+
     margin-bottom:10px;
-    color:var(--dark);
+
 }
+
 
 .product-info p{
-    font-size:13px;
+
+    font-size:12px;
+
     color:#666;
+
     line-height:1.6;
-    min-height:62px;
+
+    min-height:60px;
+
 }
+
 
 .product-btn{
-    display:inline-flex;
+
+    display:inline-block;
+
     margin-top:15px;
-    border:1px solid var(--orange);
+
+    border:
+    1px solid var(--orange);
+
     color:var(--orange);
+
     padding:9px 15px;
+
     text-decoration:none;
-    font-size:12px;
-    font-weight:bold;
+
     border-radius:4px;
+
+    font-size:11px;
+
+    font-weight:bold;
+
     transition:.3s;
+
 }
+
 
 .product-btn:hover{
+
     background:var(--orange);
-    color:white;
+
+    color:#ffffff;
+
 }
 
-/* =====================================================
+
+/* ==========================================
    WHY SECTION
-===================================================== */
+========================================== */
 
 .why{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+    1fr 1fr;
+
     min-height:500px;
+
 }
+
 
 .why-content{
-    padding:80px 10%;
-    background:white;
+
+    padding:80px 12%;
+
+    background:#ffffff;
+
 }
+
 
 .why-content h2{
+
     font-size:38px;
+
     line-height:1.2;
-    margin-bottom:30px;
+
+    margin-bottom:35px;
+
 }
+
 
 .why-content h2 span{
+
     color:var(--orange);
+
 }
+
 
 .why-list{
+
     list-style:none;
+
 }
+
 
 .why-list li{
-    margin-bottom:20px;
-    font-size:16px;
+
     display:flex;
+
     align-items:center;
-    gap:12px;
+
+    gap:15px;
+
+    margin-bottom:22px;
+
+    font-size:16px;
+
 }
 
-.check{
-    width:25px;
-    height:25px;
-    background:var(--orange);
-    color:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:13px;
+
+.why-list img{
+
+    width:24px;
+
+    height:24px;
+
 }
+
+
+/* ==========================================
+   WHY IMAGE
+========================================== */
 
 .why-image{
+
     background:
+
     linear-gradient(
+
         90deg,
-        rgba(52,57,60,.1),
-        rgba(52,57,60,.35)
+
+        rgba(52,57,60,.05),
+
+        rgba(52,57,60,.25)
+
     ),
-    url('produk/aplikator.jpg');
+
+    url("background/aplikator.jpg");
 
     background-size:cover;
+
     background-position:center;
+
 }
 
-/* =====================================================
+
+/* ==========================================
    CTA
-===================================================== */
+========================================== */
 
 .cta{
+
     background:var(--orange);
-    padding:70px 0;
-    color:white;
+
+    color:#ffffff;
+
     text-align:center;
+
+    padding:70px 0;
+
 }
+
 
 .cta h2{
-    font-size:36px;
+
+    font-size:34px;
+
     margin-bottom:15px;
+
 }
+
 
 .cta p{
-    margin-bottom:25px;
-    font-size:17px;
+
+    font-size:16px;
+
+    margin-bottom:30px;
+
 }
+
 
 .cta .btn-outline{
-    border-color:white;
-    color:white;
+
+    border-color:#ffffff;
+
+    color:#ffffff;
+
 }
+
 
 .cta .btn-outline:hover{
-    background:white;
+
+    background:#ffffff;
+
     color:var(--orange);
+
 }
 
-/* =====================================================
+
+/* ==========================================
    FOOTER
-===================================================== */
+========================================== */
 
 footer{
+
     background:var(--dark);
-    color:white;
+
+    color:#ffffff;
+
     padding-top:70px;
+
 }
+
 
 .footer-grid{
+
     display:grid;
-    grid-template-columns:2fr 1fr 1fr 1.5fr;
+
+    grid-template-columns:
+    2fr 1fr 1fr 1.5fr;
+
     gap:40px;
+
 }
+
 
 .footer-logo{
-    font-size:30px;
-    font-weight:900;
-    font-style:italic;
-    margin-bottom:15px;
+
+    width:180px;
+
+    margin-bottom:20px;
+
 }
 
-.footer-logo span{
-    color:var(--orange);
+
+.footer-logo img{
+
+    width:100%;
+
 }
+
 
 .footer-description{
+
     color:#bbbbbb;
-    font-size:13px;
+
+    font-size:12px;
+
     line-height:1.7;
-    max-width:250px;
+
 }
+
 
 .footer-column h4{
+
     margin-bottom:20px;
-    font-size:15px;
+
+    font-size:14px;
+
 }
+
 
 .footer-column a{
+
     display:block;
+
     color:#bbbbbb;
+
     text-decoration:none;
-    font-size:13px;
+
     margin-bottom:12px;
+
+    font-size:12px;
+
     transition:.3s;
+
 }
+
 
 .footer-column a:hover{
+
     color:var(--orange);
+
 }
+
 
 .footer-contact p{
-    font-size:13px;
+
     color:#bbbbbb;
+
+    font-size:12px;
+
     margin-bottom:12px;
+
 }
+
 
 .footer-bottom{
-    border-top:1px solid #4c4c4c;
+
+    border-top:
+    1px solid #4a4a4a;
+
     margin-top:50px;
-    padding:20px 0;
+
+    padding:20px;
+
     text-align:center;
-    font-size:12px;
-    color:#aaaaaa;
+
+    font-size:11px;
+
+    color:#999;
+
 }
 
-/* =====================================================
-   RESPONSIVE TABLET
-===================================================== */
+
+/* ==========================================
+   TABLET
+========================================== */
 
 @media(max-width:1000px){
 
     .nav-menu{
+
         gap:18px;
+
         margin-left:20px;
+
     }
 
     .hero h1{
-        font-size:45px;
+
+        font-size:48px;
+
     }
 
     .product-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
 
-    .benefit-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
+
     }
 
 }
 
-/* =====================================================
-   RESPONSIVE MOBILE
-===================================================== */
+
+/* ==========================================
+   MOBILE
+========================================== */
 
 @media(max-width:768px){
 
+    header{
+
+        height:75px;
+
+    }
+
+
     .navbar{
+
         height:75px;
+
     }
 
-    .logo{
-        width:145px;
-        height:75px;
+
+    .logo-box{
+
+        width:150px;
+
+        height:70px;
+
         margin-top:0;
+
+        padding:8px;
+
     }
 
-    .logo-text{
-        font-size:20px;
-        line-height:18px;
-    }
 
     .menu-toggle{
+
         display:block;
+
     }
+
 
     .nav-menu{
-        position:absolute;
-        top:75px;
-        left:0;
-        width:100%;
-        background:var(--dark);
-        flex-direction:column;
-        gap:0;
+
         display:none;
+
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        width:100%;
+
+        background:var(--dark);
+
+        flex-direction:column;
+
+        gap:0;
+
         margin:0;
+
     }
+
 
     .nav-menu.active{
+
         display:flex;
+
     }
+
 
     .nav-menu a{
+
         padding:18px 30px;
-        border-top:1px solid #4b4b4b;
+
+        border-top:
+        1px solid #4a4a4a;
+
     }
 
+
     .btn-contact{
+
         display:none;
+
     }
+
 
     /* HERO */
 
     .hero{
-        min-height:auto;
+
         background:
+
         linear-gradient(
+
             rgba(255,255,255,.95),
-            rgba(255,255,255,.85)
+
+            rgba(255,255,255,.88)
+
         ),
-        url('produk/hero.jpg');
+
+        url("background/hero.jpg");
 
         background-position:center;
+
     }
+
 
     .hero-content{
+
         width:100%;
+
         padding:70px 0;
+
     }
+
 
     .hero h1{
-        font-size:42px;
+
+        font-size:40px;
+
     }
+
 
     .hero-features{
+
         flex-direction:column;
-        gap:20px;
+
     }
+
 
     .feature-mini{
+
         width:100%;
+
     }
+
 
     .hero-buttons{
+
         flex-direction:column;
+
     }
 
-    .btn-primary,
-    .btn-outline{
-        justify-content:center;
-    }
 
     /* BENEFIT */
 
     .benefit-grid{
+
         grid-template-columns:1fr;
-        gap:25px;
+
     }
 
-    /* PRODUCTS */
+
+    /* PRODUCT */
 
     .product-grid{
+
         grid-template-columns:1fr;
+
     }
 
+
     .product-image{
+
         height:280px;
+
     }
+
 
     /* WHY */
 
     .why{
+
         grid-template-columns:1fr;
+
     }
+
 
     .why-content{
+
         padding:60px 8%;
+
     }
+
 
     .why-content h2{
+
         font-size:30px;
+
     }
 
+
     .why-image{
+
         height:400px;
+
     }
+
 
     /* FOOTER */
 
     .footer-grid{
+
         grid-template-columns:1fr;
+
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 
-<!-- =====================================================
+<!-- ==========================================
      HEADER
-===================================================== -->
+========================================== -->
 
 <header>
 
-    <div class="container navbar">
-
-        <div class="logo">
-            <div class="logo-text">
-                MORTAR<br>
-                <span>KITA</span>
-            </div>
-        </div>
+<div class="container navbar">
 
 
-        <nav class="nav-menu" id="navMenu">
+    <!-- LOGO -->
 
-            <a href="#beranda" class="active">BERANDA</a>
-            <a href="#produk">PRODUK</a>
-            <a href="#solusi">SOLUSI</a>
-            <a href="#artikel">TIPS & ARTIKEL</a>
-            <a href="#tentang">TENTANG KAMI</a>
-            <a href="#kontak">KONTAK</a>
+    <div class="logo-box">
 
-        </nav>
-
-
-        <a href="https://wa.me/" class="btn-contact">
-            ? HUBUNGI KAMI
-        </a>
-
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            ?
-        </div>
+        <img
+        src="assets/logo/logo-mortarkita.png"
+        alt="Mortar Kita Logo">
 
     </div>
+
+
+    <!-- MENU -->
+
+    <nav
+    class="nav-menu"
+    id="navMenu">
+
+        <a
+        href="#beranda"
+        class="active">
+        BERANDA
+        </a>
+
+        <a href="#produk">
+        PRODUK
+        </a>
+
+        <a href="#solusi">
+        SOLUSI
+        </a>
+
+        <a href="#artikel">
+        TIPS & ARTIKEL
+        </a>
+
+        <a href="#tentang">
+        TENTANG KAMI
+        </a>
+
+        <a href="#kontak">
+        KONTAK
+        </a>
+
+    </nav>
+
+
+    <!-- CONTACT -->
+
+    <a
+    href="#kontak"
+    class="btn-contact">
+
+    ☏ HUBUNGI KAMI
+
+    </a>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+    class="menu-toggle"
+    onclick="toggleMenu()">
+
+    ☰
+
+    </div>
+
+
+</div>
 
 </header>
 
 
-<!-- =====================================================
+<!-- ==========================================
      HERO
-===================================================== -->
+========================================== -->
 
-<section class="hero" id="beranda">
+<section
+class="hero"
+id="beranda">
 
-    <div class="container">
+<div class="container">
 
-        <div class="hero-content">
-
-            <div class="hero-subtitle">
-                SOLUSI BANGUNAN ANDA
-            </div>
+<div class="hero-content">
 
 
-            <h1>
-                KUAT MENEMPEL<br>
-                <span>TAHAN LAMA</span>
-            </h1>
+<div class="hero-subtitle">
+
+SOLUSI BANGUNAN ANDA
+
+</div>
 
 
-            <p class="hero-description">
-                Mortar Kita hadir dengan produk berkualitas untuk
-                menghasilkan bangunan yang kuat, rapi, tahan lama,
-                dan mudah diaplikasikan.
-            </p>
+<h1>
+
+KUAT MENEMPEL
+
+<br>
+
+<span>
+TAHAN LAMA
+</span>
+
+</h1>
 
 
-            <div class="hero-features">
+<p class="hero-description">
 
-                <div class="feature-mini">
+Mortar Kita hadir dengan produk berkualitas
+untuk menghasilkan bangunan yang kuat,
+rapi dan tahan lama.
 
-                    <div class="icon">?</div>
-
-                    <div>
-                        <h4>Kualitas Terjamin</h4>
-                        <p>Bahan pilihan dengan hasil terbaik.</p>
-                    </div>
-
-                </div>
+</p>
 
 
-                <div class="feature-mini">
+<!-- HERO FEATURES -->
 
-                    <div class="icon">??</div>
-
-                    <div>
-                        <h4>Tahan Cuaca</h4>
-                        <p>Tahan air dan cuaca ekstrem.</p>
-                    </div>
-
-                </div>
+<div class="hero-features">
 
 
-                <div class="feature-mini">
+<div class="feature-mini">
 
-                    <div class="icon">??</div>
+<img
+src="assets/icons/quality.svg"
+alt="Kualitas">
 
-                    <div>
-                        <h4>Mudah Aplikasikan</h4>
-                        <p>Praktis untuk profesional maupun DIY.</p>
-                    </div>
+<div>
 
-                </div>
+<h4>
+Kualitas Terjamin
+</h4>
 
-            </div>
+<p>
+Bahan pilihan dengan hasil terbaik.
+</p>
+
+</div>
+
+</div>
 
 
-            <div class="hero-buttons">
 
-                <a href="#produk" class="btn-primary">
-                    LIHAT PRODUK ?
-                </a>
+<div class="feature-mini">
 
-                <a href="https://wa.me/" class="btn-outline">
-                    KONSULTASI GRATIS ?
-                </a>
+<img
+src="assets/icons/weather.svg"
+alt="Tahan Cuaca">
 
-            </div>
+<div>
 
-        </div>
+<h4>
+Tahan Cuaca
+</h4>
 
-    </div>
+<p>
+Tahan air dan cuaca ekstrem.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="feature-mini">
+
+<img
+src="assets/icons/easy.svg"
+alt="Mudah Aplikasi">
+
+<div>
+
+<h4>
+Mudah Aplikasi
+</h4>
+
+<p>
+Praktis untuk profesional dan DIY.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- BUTTON -->
+
+<div class="hero-buttons">
+
+<a
+href="#produk"
+class="btn-primary">
+
+LIHAT PRODUK →
+
+</a>
+
+
+<a
+href="#kontak"
+class="btn-outline">
+
+KONSULTASI GRATIS
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- ==========================================
      BENEFIT
-===================================================== -->
+========================================== -->
 
 <section class="benefit-bar">
 
-    <div class="container">
+<div class="container">
 
-        <div class="benefit-grid">
-
-
-            <div class="benefit-item">
-
-                <div class="benefit-icon">?</div>
-
-                <div>
-                    <h3>KUALITAS PREMIUM</h3>
-                    <p>Bahan baku pilihan dengan standar kualitas tinggi.</p>
-                </div>
-
-            </div>
+<div class="benefit-grid">
 
 
-            <div class="benefit-item">
+<div class="benefit-item">
 
-                <div class="benefit-icon">?</div>
+<img
+src="assets/icons/building.svg"
+alt="Premium">
 
-                <div>
-                    <h3>APLIKASI MUDAH</h3>
-                    <p>Praktis digunakan untuk hasil yang maksimal.</p>
-                </div>
+<div>
 
-            </div>
+<h3>
+KUALITAS PREMIUM
+</h3>
 
+<p>
+Bahan baku pilihan dengan standar tinggi.
+</p>
 
-            <div class="benefit-item">
+</div>
 
-                <div class="benefit-icon">?</div>
-
-                <div>
-                    <h3>TAHAN LAMA</h3>
-                    <p>Produk tahan cuaca, retak dan kelembapan.</p>
-                </div>
-
-            </div>
+</div>
 
 
-            <div class="benefit-item">
 
-                <div class="benefit-icon">?</div>
+<div class="benefit-item">
 
-                <div>
-                    <h3>SUPPORT AHLI</h3>
-                    <p>Tim siap membantu Anda kapan saja.</p>
-                </div>
+<img
+src="assets/icons/check.svg"
+alt="Mudah">
 
-            </div>
+<div>
+
+<h3>
+APLIKASI MUDAH
+</h3>
+
+<p>
+Praktis digunakan untuk hasil maksimal.
+</p>
+
+</div>
+
+</div>
 
 
-        </div>
 
-    </div>
+<div class="benefit-item">
+
+<img
+src="assets/icons/shield.svg"
+alt="Tahan Lama">
+
+<div>
+
+<h3>
+TAHAN LAMA
+</h3>
+
+<p>
+Tahan cuaca dan kelembapan.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="benefit-item">
+
+<img
+src="assets/icons/support.svg"
+alt="Support">
+
+<div>
+
+<h3>
+SUPPORT AHLI
+</h3>
+
+<p>
+Tim siap membantu Anda.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- ==========================================
      PRODUK
-===================================================== -->
+========================================== -->
 
-<section class="products" id="produk">
+<section
+class="products"
+id="produk">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
 
-            <h2>
-                PRODUK <span>UNGGULAN</span>
-            </h2>
+<div class="section-title">
 
-            <div class="section-line"></div>
+<h2>
 
-        </div>
+PRODUK
 
+<span>
+UNGGULAN
+</span>
 
-        <div class="product-grid" id="productGrid">
+</h2>
 
-            <!-- =====================================
-                 PRODUK 01
-            ====================================== -->
+<div class="section-line"></div>
 
-            <div class="product-card">
+</div>
 
-                <div class="product-image">
 
-                    <img
-                    src="produk/produk01.png"
-                    alt="Produk 01"
-                    onerror="this.style.display='none';
-                    this.parentElement.innerHTML='<div class=image-placeholder>Upload gambar:<br><b>produk01.png</b></div>'">
+<div class="product-grid">
 
-                </div>
 
-                <div class="product-info">
+<!-- PRODUK 01 -->
 
-                    <h3>AM 82 Acian & Plester</h3>
+<div class="product-card">
 
-                    <p>
-                        Plester dan perekat bata praktis,
-                        multifungsi serta hemat waktu dan biaya.
-                    </p>
+<div class="product-image">
 
-                    <a href="#" class="product-btn">
-                        LIHAT PRODUK ?
-                    </a>
+<img
+src="produk/produk01.png"
+alt="Produk 01"
 
-                </div>
+onerror="this.style.display='none';
+this.parentElement.innerHTML=
+'<div class=image-placeholder>
+Upload gambar:<br>
+<b>produk01.png</b>
+</div>'">
 
-            </div>
+</div>
 
 
-            <!-- =====================================
-                 PRODUK 02
-            ====================================== -->
+<div class="product-info">
 
-            <div class="product-card">
+<h3>
+AM 82 Plester & Perekat Bata
+</h3>
 
-                <div class="product-image">
+<p>
 
-                    <img
-                    src="produk/produk02.png"
-                    alt="Produk 02"
-                    onerror="this.style.display='none';
-                    this.parentElement.innerHTML='<div class=image-placeholder>Upload gambar:<br><b>produk02.png</b></div>'">
+Praktis, multifungsi,
+hemat waktu dan biaya.
 
-                </div>
+</p>
 
-                <div class="product-info">
+<a
+href="#"
+class="product-btn">
 
-                    <h3>CAT PELAPIS ANTI BOCOR</h3>
+LIHAT PRODUK →
 
-                    <p>
-                        Pelapis kedap air elastis untuk
-                        melindungi dinding dan area basah.
-                    </p>
+</a>
 
-                    <a href="#" class="product-btn">
-                        LIHAT PRODUK ?
-                    </a>
+</div>
 
-                </div>
+</div>
 
-            </div>
 
+<!-- PRODUK 02 -->
 
-            <!-- =====================================
-                 PRODUK 03
-            ====================================== -->
+<div class="product-card">
 
-            <div class="product-card">
+<div class="product-image">
 
-                <div class="product-image">
+<img
+src="produk/produk02.png"
+alt="Produk 02"
 
-                    <img
-                    src="produk/produk03.png"
-                    alt="Produk 03"
-                    onerror="this.style.display='none';
-                    this.parentElement.innerHTML='<div class=image-placeholder>Upload gambar:<br><b>produk03.png</b></div>'">
+onerror="this.style.display='none';
+this.parentElement.innerHTML=
+'<div class=image-placeholder>
+Upload gambar:<br>
+<b>produk02.png</b>
+</div>'">
 
-                </div>
+</div>
 
-                <div class="product-info">
 
-                    <h3>PEREKAT KERAMIK</h3>
+<div class="product-info">
 
-                    <p>
-                        Perekat keramik dengan daya rekat kuat
-                        untuk pemasangan yang lebih tahan lama.
-                    </p>
+<h3>
+CAT PELAPIS ANTI BOCOR
+</h3>
 
-                    <a href="#" class="product-btn">
-                        LIHAT PRODUK ?
-                    </a>
+<p>
 
-                </div>
+Pelapis kedap air untuk
+perlindungan dinding.
 
-            </div>
+</p>
 
+<a href="#" class="product-btn">
 
-            <!-- =====================================
-                 PRODUK 04
-            ====================================== -->
+LIHAT PRODUK →
 
-            <div class="product-card">
+</a>
 
-                <div class="product-image">
+</div>
 
-                    <img
-                    src="produk/produk04.png"
-                    alt="Produk 04"
-                    onerror="this.style.display='none';
-                    this.parentElement.innerHTML='<div class=image-placeholder>Upload gambar:<br><b>produk04.png</b></div>'">
+</div>
 
-                </div>
 
-                <div class="product-info">
+<!-- PRODUK 03 -->
 
-                    <h3>GROUT & PENGISI NAT</h3>
+<div class="product-card">
 
-                    <p>
-                        Pengisi nat keramik untuk menghasilkan
-                        sambungan yang kuat dan rapi.
-                    </p>
+<div class="product-image">
 
-                    <a href="#" class="product-btn">
-                        LIHAT PRODUK ?
-                    </a>
+<img
+src="produk/produk03.png"
+alt="Produk 03"
 
-                </div>
+onerror="this.style.display='none';
+this.parentElement.innerHTML=
+'<div class=image-placeholder>
+Upload gambar:<br>
+<b>produk03.png</b>
+</div>'">
 
-            </div>
+</div>
 
 
-            <!-- =====================================
-                 PRODUK 05
-            ====================================== -->
+<div class="product-info">
 
-            <div class="product-card">
+<h3>
+PEREKAT KERAMIK
+</h3>
 
-                <div class="product-image">
+<p>
 
-                    <img
-                    src="produk/produk05.png"
-                    alt="Produk 05"
-                    onerror="this.style.display='none';
-                    this.parentElement.innerHTML='<div class=image-placeholder>Upload gambar:<br><b>produk05.png</b></div>'">
+Daya rekat kuat untuk
+pemasangan keramik.
 
-                </div>
+</p>
 
-                <div class="product-info">
+<a href="#" class="product-btn">
 
-                    <h3>PRODUK MORTAR LAINNYA</h3>
+LIHAT PRODUK →
 
-                    <p>
-                        Berbagai pilihan produk untuk kebutuhan
-                        konstruksi dan renovasi bangunan.
-                    </p>
+</a>
 
-                    <a href="#" class="product-btn">
-                        LIHAT PRODUK ?
-                    </a>
+</div>
 
-                </div>
+</div>
 
-            </div>
 
+<!-- PRODUK 04 -->
 
-            <!-- =====================================
-                 PRODUK 06
-            ====================================== -->
+<div class="product-card">
 
-            <div class="product-card">
+<div class="product-image">
 
-                <div class="product-image">
+<img
+src="produk/produk04.png"
+alt="Produk 04"
 
-                    <img
-                    src="produk/produk06.png"
-                    alt="Produk 06"
-                    onerror="this.style.display='none';
-                    this.parentElement.innerHTML='<div class=image-placeholder>Upload gambar:<br><b>produk06.png</b></div>'">
+onerror="this.style.display='none';
+this.parentElement.innerHTML=
+'<div class=image-placeholder>
+Upload gambar:<br>
+<b>produk04.png</b>
+</div>'">
 
-                </div>
+</div>
 
-                <div class="product-info">
 
-                    <h3>PRODUK BARU</h3>
+<div class="product-info">
 
-                    <p>
-                        Produk baru Mortar Kita untuk solusi
-                        pekerjaan bangunan yang lebih praktis.
-                    </p>
+<h3>
+GROUT & PENGISI NAT
+</h3>
 
-                    <a href="#" class="product-btn">
-                        LIHAT PRODUK ?
-                    </a>
+<p>
 
-                </div>
+Pengisi nat untuk hasil
+yang kuat dan rapi.
 
-            </div>
+</p>
 
+<a href="#" class="product-btn">
 
-        </div>
+LIHAT PRODUK →
 
-    </div>
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUK 05 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="produk/produk05.png"
+alt="Produk 05"
+
+onerror="this.style.display='none';
+this.parentElement.innerHTML=
+'<div class=image-placeholder>
+Upload gambar:<br>
+<b>produk05.png</b>
+</div>'">
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+PRODUK LAINNYA
+</h3>
+
+<p>
+
+Solusi lengkap kebutuhan
+pekerjaan bangunan.
+
+</p>
+
+<a href="#" class="product-btn">
+
+LIHAT PRODUK →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUK 06 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img
+src="produk/produk06.png"
+alt="Produk 06"
+
+onerror="this.style.display='none';
+this.parentElement.innerHTML=
+'<div class=image-placeholder>
+Upload gambar:<br>
+<b>produk06.png</b>
+</div>'">
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+PRODUK BARU
+</h3>
+
+<p>
+
+Produk Mortar Kita untuk
+kebutuhan konstruksi.
+
+</p>
+
+<a href="#" class="product-btn">
+
+LIHAT PRODUK →
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
-     WHY CHOOSE US
-===================================================== -->
+<!-- ==========================================
+     WHY MORTAR KITA
+========================================== -->
 
-<section class="why" id="solusi">
-
-
-    <div class="why-content">
-
-        <h2>
-            KENAPA PILIH<br>
-            <span>MORTAR KITA?</span>
-        </h2>
+<section
+class="why"
+id="solusi">
 
 
-        <ul class="why-list">
+<div class="why-content">
 
-            <li>
-                <span class="check">?</span>
-                Harga kompetitif
-            </li>
+<h2>
 
-            <li>
-                <span class="check">?</span>
-                Kualitas produk teruji
-            </li>
+KENAPA PILIH
 
-            <li>
-                <span class="check">?</span>
-                Hasil pekerjaan lebih rapi
-            </li>
+<br>
 
-            <li>
-                <span class="check">?</span>
-                Tersedia berbagai ukuran kemasan
-            </li>
+<span>
+MORTAR KITA?
+</span>
 
-            <li>
-                <span class="check">?</span>
-                Cocok untuk profesional dan DIY
-            </li>
-
-        </ul>
-
-    </div>
+</h2>
 
 
-    <div class="why-image"></div>
+<ul class="why-list">
+
+
+<li>
+
+<img
+src="assets/icons/check.svg"
+alt="Check">
+
+Harga kompetitif
+
+</li>
+
+
+<li>
+
+<img
+src="assets/icons/check.svg"
+alt="Check">
+
+Kualitas produk teruji
+
+</li>
+
+
+<li>
+
+<img
+src="assets/icons/check.svg"
+alt="Check">
+
+Hasil pekerjaan lebih rapi
+
+</li>
+
+
+<li>
+
+<img
+src="assets/icons/check.svg"
+alt="Check">
+
+Berbagai ukuran kemasan
+
+</li>
+
+
+<li>
+
+<img
+src="assets/icons/check.svg"
+alt="Check">
+
+Cocok profesional dan DIY
+
+</li>
+
+
+</ul>
+
+</div>
+
+
+<div class="why-image"></div>
 
 
 </section>
 
 
-<!-- =====================================================
+<!-- ==========================================
      CTA
-===================================================== -->
+========================================== -->
 
 <section class="cta">
 
-    <div class="container">
+<div class="container">
 
-        <h2>
-            BUTUH SOLUSI UNTUK PEKERJAAN BANGUNAN?
-        </h2>
+<h2>
 
-        <p>
-            Konsultasikan kebutuhan proyek Anda bersama tim Mortar Kita.
-        </p>
+BUTUH SOLUSI PEKERJAAN BANGUNAN?
 
-        <a href="https://wa.me/" class="btn-outline">
-            KONSULTASI SEKARANG
-        </a>
+</h2>
 
-    </div>
+
+<p>
+
+Konsultasikan kebutuhan proyek Anda
+bersama tim Mortar Kita.
+
+</p>
+
+
+<a
+href="#kontak"
+class="btn-outline">
+
+KONSULTASI SEKARANG
+
+</a>
+
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- ==========================================
      FOOTER
-===================================================== -->
+========================================== -->
 
 <footer id="kontak">
 
-    <div class="container">
-
-        <div class="footer-grid">
+<div class="container">
 
 
-            <div>
-
-                <div class="footer-logo">
-                    MORTAR <span>KITA</span>
-                </div>
-
-                <p class="footer-description">
-                    Mortar Kita adalah solusi bahan bangunan
-                    berkualitas untuk menghasilkan pekerjaan
-                    yang kuat, rapi dan tahan lama.
-                </p>
-
-            </div>
+<div class="footer-grid">
 
 
-            <div class="footer-column">
+<!-- LOGO FOOTER -->
 
-                <h4>PRODUK</h4>
+<div>
 
-                <a href="#">Cat Pelapis Anti Bocor</a>
-                <a href="#">Acian & Plester</a>
-                <a href="#">Perekat Keramik</a>
-                <a href="#">Grout & Pengisi Nat</a>
+<div class="footer-logo">
 
-            </div>
+<img
+src="assets/logo/logo-mortarkita.png"
+alt="Mortar Kita">
 
-
-            <div class="footer-column">
-
-                <h4>PERUSAHAAN</h4>
-
-                <a href="#">Tentang Kami</a>
-                <a href="#">Keunggulan</a>
-                <a href="#">Artikel & Tips</a>
-                <a href="#">Karir</a>
-
-            </div>
+</div>
 
 
-            <div class="footer-column footer-contact">
+<p class="footer-description">
 
-                <h4>KONTAK KAMI</h4>
+Mortar Kita adalah solusi bahan bangunan
+berkualitas untuk menghasilkan pekerjaan
+yang kuat, rapi dan tahan lama.
 
-                <p>? 0812-3456-7890</p>
-                <p>? info@mortarkita.com</p>
-                <p>? Tangerang Selatan, Banten</p>
+</p>
 
-            </div>
-
-
-        </div>
+</div>
 
 
-        <div class="footer-bottom">
 
-            � 2026 Mortar Kita. All Rights Reserved.
+<!-- PRODUK -->
 
-        </div>
+<div class="footer-column">
 
-    </div>
+<h4>
+PRODUK
+</h4>
+
+<a href="#">
+Acian & Plester
+</a>
+
+<a href="#">
+Pelapis Anti Bocor
+</a>
+
+<a href="#">
+Perekat Keramik
+</a>
+
+<a href="#">
+Grout & Pengisi Nat
+</a>
+
+</div>
+
+
+
+<!-- PERUSAHAAN -->
+
+<div class="footer-column">
+
+<h4>
+PERUSAHAAN
+</h4>
+
+<a href="#">
+Tentang Kami
+</a>
+
+<a href="#">
+Keunggulan
+</a>
+
+<a href="#">
+Artikel & Tips
+</a>
+
+<a href="#">
+Karir
+</a>
+
+</div>
+
+
+
+<!-- KONTAK -->
+
+<div class="footer-column footer-contact">
+
+<h4>
+KONTAK KAMI
+</h4>
+
+<p>
+☎ 0812-3456-7890
+</p>
+
+<p>
+✉ info@mortarkita.com
+</p>
+
+<p>
+📍 Tangerang Selatan
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+© 2026 Mortar Kita.
+All Rights Reserved.
+
+</div>
+
+
+</div>
 
 </footer>
 
 
-<!-- =====================================================
+<!-- ==========================================
      JAVASCRIPT
-===================================================== -->
+========================================== -->
 
 <script>
 
 
-/* ============================================
-   MOBILE MENU
-============================================ */
+/* MOBILE MENU */
 
 function toggleMenu(){
 
-    const menu = document.getElementById("navMenu");
+    const menu =
+    document.getElementById("navMenu");
 
     menu.classList.toggle("active");
 
 }
 
 
-/* ============================================
-   CLOSE MENU AFTER CLICK MOBILE
-============================================ */
+/* CLOSE MENU */
 
-const menuLinks = document.querySelectorAll(".nav-menu a");
+const menuLinks =
+document.querySelectorAll(".nav-menu a");
+
 
 menuLinks.forEach(function(link){
 
-    link.addEventListener("click", function(){
+    link.addEventListener(
+    "click",
+
+    function(){
 
         document
         .getElementById("navMenu")
@@ -1371,23 +2191,31 @@ menuLinks.forEach(function(link){
 });
 
 
-/* ============================================
-   ACTIVE MENU
-============================================ */
+/* ACTIVE MENU */
 
-window.addEventListener("scroll", function(){
+window.addEventListener(
+"scroll",
 
-    const sections = document.querySelectorAll("section");
+function(){
+
+    const sections =
+    document.querySelectorAll("section");
 
     let current = "";
 
+
     sections.forEach(function(section){
 
-        const sectionTop = section.offsetTop;
+        const top =
+        section.offsetTop;
 
-        if(window.pageYOffset >= sectionTop - 150){
+        if(
+        window.pageYOffset >=
+        top - 150
+        ){
 
-            current = section.getAttribute("id");
+            current =
+            section.getAttribute("id");
 
         }
 
@@ -1398,8 +2226,12 @@ window.addEventListener("scroll", function(){
 
         link.classList.remove("active");
 
+
         if(
-            link.getAttribute("href") === "#" + current
+
+        link.getAttribute("href")
+        === "#" + current
+
         ){
 
             link.classList.add("active");
@@ -1411,27 +2243,9 @@ window.addEventListener("scroll", function(){
 });
 
 
-/* ============================================
-   PRODUCT IMAGE CHECK
-============================================ */
-
-/*
-Jika file produk belum tersedia,
-website otomatis menampilkan placeholder.
-
-Contoh file:
-
-produk/produk01.png
-produk/produk02.png
-produk/produk03.png
-
-Saat Anda upload gambar dengan nama tersebut,
-gambar langsung tampil tanpa mengubah coding.
-*/
-
-
 </script>
 
 
 </body>
+
 </html>
