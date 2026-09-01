@@ -1045,7 +1045,8 @@ footer{
                         src="${escapeHTML(product.image)}"
                         alt="${escapeHTML(product.code)} - ${escapeHTML(product.name)}"
                         loading="lazy"
-                        data-product-image>
+                        data-product-image
+                        data-placeholder-target>
                     <div class="image-placeholder" data-placeholder hidden>
                         Gambar belum tersedia
                     </div>
@@ -1066,11 +1067,31 @@ footer{
         `).join("");
 
         productGrid.querySelectorAll("[data-product-image]").forEach((image) => {
+            const placeholder = image.parentElement.querySelector("[data-placeholder]");
+
+            // Placeholder selalu tersembunyi selama gambar belum terbukti gagal.
+            if (placeholder) placeholder.hidden = true;
+
+            image.addEventListener("load", () => {
+                image.hidden = false;
+                if (placeholder) placeholder.hidden = true;
+            });
+
             image.addEventListener("error", () => {
                 image.hidden = true;
-                const placeholder = image.parentElement.querySelector("[data-placeholder]");
-                if(placeholder) placeholder.hidden = false;
+                if (placeholder) placeholder.hidden = false;
             });
+
+            // Menangani gambar yang sudah berada di cache browser.
+            if (image.complete) {
+                if (image.naturalWidth > 0) {
+                    image.hidden = false;
+                    if (placeholder) placeholder.hidden = true;
+                } else {
+                    image.hidden = true;
+                    if (placeholder) placeholder.hidden = false;
+                }
+            }
         });
     }
 
