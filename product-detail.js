@@ -2,7 +2,7 @@
   "use strict";
   const PRODUCT_FILE="products.json";
   const DEFAULT_ID="am86";
-  const WA_NUMBER="6281234567890";
+  const WA_NUMBER="6285117110259";
   const $=s=>document.querySelector(s);
   const esc=v=>String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
   const id=(new URLSearchParams(location.search).get("id")||DEFAULT_ID).trim().toLowerCase();
