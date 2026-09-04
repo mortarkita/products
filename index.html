@@ -1048,13 +1048,13 @@ footer{
 
     <div class="footer-column">
         <h4>PRODUK</h4>
-        <a href="#pengisi-nat">Pengisi Nat</a>
-        <a href="#pelapis">Pelapis</a>
-        <a href="#anti-bocor">Anti Bocor</a>
-        <a href="#mortar">Mortar</a>
-        <a href="#perekat">Perekat</a>
-        <a href="#aditif">Aditif</a>
-        <a href="#bahan-lainnya">Bahan Lainnya</a>
+        <a href="#produk" data-footer-category="pengisi-nat">Pengisi Nat</a>
+        <a href="#produk" data-footer-category="pelapis">Pelapis</a>
+        <a href="#produk" data-footer-category="anti-bocor">Anti Bocor</a>
+        <a href="#produk" data-footer-category="mortar">Mortar</a>
+        <a href="#produk" data-footer-category="perekat">Perekat</a>
+        <a href="#produk" data-footer-category="aditif">Aditif</a>
+        <a href="#produk" data-footer-category="bahan-lainnya">Bahan Lainnya</a>
     </div>
 
     <div class="footer-column">
@@ -1225,6 +1225,15 @@ footer{
         }
     }
 
+    function initFooterCategories(){
+        document.querySelectorAll("[data-footer-category]").forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                setCategory(link.dataset.footerCategory);
+            });
+        });
+    }
+
     async function loadProducts(){
         try{
             const [productsResponse, categoryResponse] = await Promise.all([
@@ -1310,6 +1319,7 @@ footer{
     window.addEventListener("scroll", updateActiveMenu, {passive:true});
     updateActiveMenu();
     initCategories();
+    initFooterCategories();
     loadProducts();
 })();
 </script>
