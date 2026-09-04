@@ -2,7 +2,6 @@
   "am82": {
     "code": "AM 82",
     "name": "Perekat Bata dan Plester",
-    "category": "mortar",
     "image": "produk/am82.png",
     "intro": "Perekat Bata dan Plester yang terbuat dari campuran semen, pasir dan additive yang diaplikasikan hanya dengan penambahan air (tanpa perlu pengayakan pasir) untuk membentuk permukaan kuat dan rata.",
     "suitable_for": "Dinding, interior & eksterior, area kering & basah",
@@ -17,12 +16,13 @@
       "Kemasan": "40 kg",
       "Kebutuhan air": "6–7 liter / sak 40 kg",
       "Daya sebar": "Perekat bata merah: ± 1,2 m² / sak; Plester: 2–2,4 m² / sak"
-    }
+    },
+    "category": "mortar",
+    "show_in_all": true
   },
   "am83": {
     "code": "AM 83",
     "name": "Floor Hardener",
-    "category": "mortar",
     "image": "produk/am83.png",
     "intro": "Mortar instan siap pakai yang berfungsi sebagai pengeras lantai beton berbentuk bubuk untuk meningkatkan kekerasan permukaan beton.",
     "suitable_for": "Interior & eksterior, area kering & basah seperti gudang, bengkel, garasi, showroom, workshop, parkiran, dll.",
@@ -36,12 +36,13 @@
     "specs": {
       "Kemasan": "25 kg",
       "Daya sebar": "Light Traffic: ± 8,25 m² / sak 25 kg; Medium Traffic: ± 5 m² / sak 25 kg; Heavy Traffic: ± 3,6 m² / sak 25 kg"
-    }
+    },
+    "category": "mortar",
+    "show_in_all": true
   },
   "am86": {
     "code": "AM 86",
     "name": "Acian di atas Beton & Plester",
-    "category": "mortar",
     "image": "produk/am86.png",
     "intro": "Mortar instan siap pakai yang diaplikasikan di atas permukaan beton maupun plester sehingga menghasilkan lapisan acian yang halus dan berkualitas.",
     "suitable_for": "Dinding, interior & eksterior",
@@ -57,12 +58,13 @@
       "Kemasan": "20 kg & 40 kg",
       "Kebutuhan air": "± 7 liter / sak 20 kg",
       "Daya sebar": "8–10 m² / sak 20 kg"
-    }
+    },
+    "category": "mortar",
+    "show_in_all": true
   },
   "am87": {
     "code": "AM 87",
     "name": "Acian Putih di atas Beton & Plester",
-    "category": "mortar",
     "image": "produk/am87.png",
     "intro": "Mortar instan siap pakai yang diaplikasikan di atas permukaan beton maupun plester sehingga menghasilkan lapisan acian berwarna putih yang halus dan berkualitas.",
     "suitable_for": "Dinding, interior & eksterior",
@@ -78,12 +80,13 @@
       "Kemasan": "20 kg",
       "Kebutuhan air": "± 7 liter / sak 20 kg",
       "Daya sebar": "8–10 m² / sak 20 kg"
-    }
+    },
+    "category": "mortar",
+    "show_in_all": true
   },
   "am88": {
     "code": "AM 88",
     "name": "Acian di atas Plester",
-    "category": "mortar",
     "image": "produk/am88.png",
     "intro": "Mortar instan siap pakai yang diaplikasikan di atas permukaan plester sehingga menghasilkan permukaan dinding yang halus dan rata serta siap untuk dicat.",
     "suitable_for": "Dinding, interior & eksterior",
@@ -98,12 +101,13 @@
       "Kemasan": "40 kg",
       "Kebutuhan air": "± 14 liter / sak 40 kg",
       "Daya sebar": "16–20 m² / sak 40 kg"
-    }
+    },
+    "category": "mortar",
+    "show_in_all": true
   },
   "am89": {
     "code": "AM 89",
     "name": "Semen Anti Susut",
-    "category": "mortar",
     "image": "produk/am89.png",
     "intro": "Mortar instan siap pakai yang dapat digunakan sebagai grouting untuk pengisi celah dan perbaikan beton bermutu tinggi.",
     "suitable_for": "Interior & eksterior, area kering & basah",
@@ -119,6 +123,8 @@
       "Kemasan": "25 kg",
       "Kebutuhan air": "± 4 liter / sak 25 kg",
       "Daya sebar": "± 0,013 m² / sak 25 kg"
-    }
+    },
+    "category": "mortar",
+    "show_in_all": true
   }
 }
