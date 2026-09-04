@@ -1104,13 +1104,21 @@ footer{
     }
 
     let allProducts = {};
+    let categoryProducts = {};
     let currentCategory = "all";
 
     function renderProducts(products, category = currentCategory){
         const entries = Object.entries(products || {});
+
+        // "Semua Produk" hanya menampilkan produk yang secara eksplisit
+        // diberi show_in_all: true. Kategori lainnya ditentukan dari
+        // kategori-produk-mortarkita.json, bukan dari product.category.
         const filteredEntries = category === "all"
-            ? entries
-            : entries.filter(([id, product]) => product.category === category);
+            ? entries.filter(([id, product]) => product.show_in_all === true)
+            : entries.filter(([id, product]) => {
+                const code = String(product.code || "").trim().toLowerCase();
+                return (categoryProducts[category] || new Set()).has(code);
+            });
 
         if(!entries.length){
             productGrid.innerHTML = placeholderHTML();
@@ -1219,22 +1227,46 @@ footer{
 
     async function loadProducts(){
         try{
-            const response = await fetch("products.json", {cache:"no-cache"});
+            const [productsResponse, categoryResponse] = await Promise.all([
+                fetch("products.json", {cache:"no-cache"}),
+                fetch("kategori-produk-mortarkita.json", {cache:"no-cache"})
+            ]);
 
-            if(!response.ok){
-                throw new Error(`HTTP ${response.status}`);
+            if(!productsResponse.ok){
+                throw new Error(`products.json HTTP ${productsResponse.status}`);
             }
 
-            const products = await response.json();
-            allProducts = products;
+            if(!categoryResponse.ok){
+                throw new Error(`kategori-produk-mortarkita.json HTTP ${categoryResponse.status}`);
+            }
+
+            const [products, categories] = await Promise.all([
+                productsResponse.json(),
+                categoryResponse.json()
+            ]);
+
+            // Master kategori: produk dicocokkan berdasarkan field "code".
+            categoryProducts = Object.fromEntries(
+                Object.entries(categories || {}).map(([slug, data]) => [
+                    slug,
+                    new Set(
+                        (data?.products || [])
+                            .map(code => String(code).trim().toLowerCase())
+                    )
+                ])
+            );
+
+            allProducts = products || {};
             renderProducts(allProducts, currentCategory);
         }catch(error){
-            console.error("Gagal memuat products.json:", error);
+            console.error("Gagal memuat data produk/kategori:", error);
 
             productGrid.innerHTML = `
                 <div class="image-placeholder" style="grid-column:1/-1;padding:50px;">
                     Data produk belum dapat dimuat.<br>
-                    Pastikan <strong>products.json</strong> berada satu folder dengan index.html.
+                    Pastikan <strong>products.json</strong> dan
+                    <strong>kategori-produk-mortarkita.json</strong>
+                    berada satu folder dengan index.html.
                 </div>
             `;
         }
