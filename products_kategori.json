@@ -17,7 +17,7 @@
       "Kebutuhan air": "6–7 liter / sak 40 kg",
       "Daya sebar": "Perekat bata merah: ± 1,2 m² / sak; Plester: 2–2,4 m² / sak"
     },
-    "category": "perekat"
+    "category": "mortar"
   },
   "am83": {
     "code": "AM 83",
@@ -57,7 +57,7 @@
       "Kebutuhan air": "± 7 liter / sak 20 kg",
       "Daya sebar": "8–10 m² / sak 20 kg"
     },
-    "category": "pelapis"
+    "category": "mortar"
   },
   "am87": {
     "code": "AM 87",
@@ -78,7 +78,7 @@
       "Kebutuhan air": "± 7 liter / sak 20 kg",
       "Daya sebar": "8–10 m² / sak 20 kg"
     },
-    "category": "pelapis"
+    "category": "mortar"
   },
   "am88": {
     "code": "AM 88",
@@ -98,7 +98,7 @@
       "Kebutuhan air": "± 14 liter / sak 40 kg",
       "Daya sebar": "16–20 m² / sak 40 kg"
     },
-    "category": "pelapis"
+    "category": "mortar"
   },
   "am89": {
     "code": "AM 89",
@@ -119,6 +119,6 @@
       "Kebutuhan air": "± 4 liter / sak 25 kg",
       "Daya sebar": "± 0,013 m² / sak 25 kg"
     },
-    "category": "pengisi-nat"
+    "category": "mortar"
   }
 }
