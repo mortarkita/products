@@ -2,6 +2,7 @@
   "am82": {
     "code": "AM 82",
     "name": "Perekat Bata dan Plester",
+    "category": "mortar",
     "image": "produk/am82.png",
     "intro": "Perekat Bata dan Plester yang terbuat dari campuran semen, pasir dan additive yang diaplikasikan hanya dengan penambahan air (tanpa perlu pengayakan pasir) untuk membentuk permukaan kuat dan rata.",
     "suitable_for": "Dinding, interior & eksterior, area kering & basah",
@@ -21,6 +22,7 @@
   "am83": {
     "code": "AM 83",
     "name": "Floor Hardener",
+    "category": "mortar",
     "image": "produk/am83.png",
     "intro": "Mortar instan siap pakai yang berfungsi sebagai pengeras lantai beton berbentuk bubuk untuk meningkatkan kekerasan permukaan beton.",
     "suitable_for": "Interior & eksterior, area kering & basah seperti gudang, bengkel, garasi, showroom, workshop, parkiran, dll.",
@@ -39,6 +41,7 @@
   "am86": {
     "code": "AM 86",
     "name": "Acian di atas Beton & Plester",
+    "category": "mortar",
     "image": "produk/am86.png",
     "intro": "Mortar instan siap pakai yang diaplikasikan di atas permukaan beton maupun plester sehingga menghasilkan lapisan acian yang halus dan berkualitas.",
     "suitable_for": "Dinding, interior & eksterior",
@@ -59,6 +62,7 @@
   "am87": {
     "code": "AM 87",
     "name": "Acian Putih di atas Beton & Plester",
+    "category": "mortar",
     "image": "produk/am87.png",
     "intro": "Mortar instan siap pakai yang diaplikasikan di atas permukaan beton maupun plester sehingga menghasilkan lapisan acian berwarna putih yang halus dan berkualitas.",
     "suitable_for": "Dinding, interior & eksterior",
@@ -79,6 +83,7 @@
   "am88": {
     "code": "AM 88",
     "name": "Acian di atas Plester",
+    "category": "mortar",
     "image": "produk/am88.png",
     "intro": "Mortar instan siap pakai yang diaplikasikan di atas permukaan plester sehingga menghasilkan permukaan dinding yang halus dan rata serta siap untuk dicat.",
     "suitable_for": "Dinding, interior & eksterior",
@@ -98,6 +103,7 @@
   "am89": {
     "code": "AM 89",
     "name": "Semen Anti Susut",
+    "category": "mortar",
     "image": "produk/am89.png",
     "intro": "Mortar instan siap pakai yang dapat digunakan sebagai grouting untuk pengisi celah dan perbaikan beton bermutu tinggi.",
     "suitable_for": "Interior & eksterior, area kering & basah",
