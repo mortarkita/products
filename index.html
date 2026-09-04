@@ -315,6 +315,38 @@ header{
     margin:12px auto;
 }
 
+.product-categories{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin:0 auto 35px;
+}
+
+.category-btn{
+    border:1px solid #d8d8d8;
+    background:#fff;
+    color:var(--dark);
+    padding:10px 17px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.category-btn:hover{
+    border-color:var(--orange);
+    color:var(--orange);
+    transform:translateY(-1px);
+}
+
+.category-btn.active{
+    background:var(--orange);
+    border-color:var(--orange);
+    color:#fff;
+}
+
 .product-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -707,6 +739,20 @@ footer{
 
     .benefit-item:last-child{border-bottom:0}
 
+    .product-categories{
+        justify-content:flex-start;
+        overflow-x:auto;
+        flex-wrap:nowrap;
+        padding-bottom:5px;
+        margin-bottom:25px;
+        scrollbar-width:thin;
+    }
+
+    .category-btn{
+        flex:0 0 auto;
+        white-space:nowrap;
+    }
+
     .product-grid{grid-template-columns:1fr}
     .product-image{height:300px}
 
@@ -895,6 +941,17 @@ footer{
         <div class="section-line"></div>
     </div>
 
+    <div class="product-categories" id="productCategories" aria-label="Kategori produk">
+        <button type="button" class="category-btn active" data-category="all">Semua Produk</button>
+        <button type="button" class="category-btn" data-category="pengisi-nat">Pengisi Nat</button>
+        <button type="button" class="category-btn" data-category="pelapis">Pelapis</button>
+        <button type="button" class="category-btn" data-category="anti-bocor">Anti Bocor</button>
+        <button type="button" class="category-btn" data-category="mortar">Mortar</button>
+        <button type="button" class="category-btn" data-category="perekat">Perekat</button>
+        <button type="button" class="category-btn" data-category="aditif">Aditif</button>
+        <button type="button" class="category-btn" data-category="bahan-lainnya">Bahan Lainnya</button>
+    </div>
+
     <div class="product-grid" id="productGrid">
         <div class="image-placeholder">Memuat produk...</div>
     </div>
@@ -991,12 +1048,13 @@ footer{
 
     <div class="footer-column">
         <h4>PRODUK</h4>
-        <a href="product-detail.html?id=am82">AM 82</a>
-        <a href="product-detail.html?id=am83">AM 83</a>
-        <a href="product-detail.html?id=am86">AM 86</a>
-        <a href="product-detail.html?id=am87">AM 87</a>
-        <a href="product-detail.html?id=am88">AM 88</a>
-        <a href="product-detail.html?id=am89">AM 89</a>
+        <a href="#pengisi-nat">Pengisi Nat</a>
+        <a href="#pelapis">Pelapis</a>
+        <a href="#anti-bocor">Anti Bocor</a>
+        <a href="#mortar">Mortar</a>
+        <a href="#perekat">Perekat</a>
+        <a href="#aditif">Aditif</a>
+        <a href="#bahan-lainnya">Bahan Lainnya</a>
     </div>
 
     <div class="footer-column">
@@ -1045,16 +1103,31 @@ footer{
         `;
     }
 
-    function renderProducts(products){
+    let allProducts = {};
+    let currentCategory = "all";
+
+    function renderProducts(products, category = currentCategory){
         const entries = Object.entries(products || {});
+        const filteredEntries = category === "all"
+            ? entries
+            : entries.filter(([id, product]) => product.category === category);
 
         if(!entries.length){
             productGrid.innerHTML = placeholderHTML();
             return;
         }
 
-        productGrid.innerHTML = entries.map(([id, product]) => `
-            <article class="product-card">
+        if(!filteredEntries.length){
+            productGrid.innerHTML = `
+                <div class="image-placeholder" style="grid-column:1/-1;padding:50px;">
+                    Belum ada produk dalam kategori ini.
+                </div>
+            `;
+            return;
+        }
+
+        productGrid.innerHTML = filteredEntries.map(([id, product]) => `
+            <article class="product-card" data-category="${escapeHTML(product.category || "bahan-lainnya")}">
                 <div class="product-image">
                     <img
                         src="${escapeHTML(product.image)}"
@@ -1110,6 +1183,40 @@ footer{
         });
     }
 
+    function setCategory(category, updateHash = true){
+        const validCategories = ["all", "pengisi-nat", "pelapis", "anti-bocor", "mortar", "perekat", "aditif", "bahan-lainnya"];
+        currentCategory = validCategories.includes(category) ? category : "all";
+
+        document.querySelectorAll(".category-btn").forEach(button => {
+            button.classList.toggle(
+                "active",
+                button.dataset.category === currentCategory
+            );
+        });
+
+        renderProducts(allProducts, currentCategory);
+
+        if(updateHash){
+            const hash = currentCategory === "all" ? "produk" : currentCategory;
+            history.replaceState(null, "", "#" + hash);
+        }
+
+        document.getElementById("produk")?.scrollIntoView({behavior:"smooth", block:"start"});
+    }
+
+    function initCategories(){
+        document.querySelectorAll(".category-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                setCategory(button.dataset.category);
+            });
+        });
+
+        const hash = window.location.hash.replace("#", "").toLowerCase();
+        if(hash && hash !== "produk"){
+            setCategory(hash, false);
+        }
+    }
+
     async function loadProducts(){
         try{
             const response = await fetch("products.json", {cache:"no-cache"});
@@ -1119,7 +1226,8 @@ footer{
             }
 
             const products = await response.json();
-            renderProducts(products);
+            allProducts = products;
+            renderProducts(allProducts, currentCategory);
         }catch(error){
             console.error("Gagal memuat products.json:", error);
 
@@ -1169,6 +1277,7 @@ footer{
 
     window.addEventListener("scroll", updateActiveMenu, {passive:true});
     updateActiveMenu();
+    initCategories();
     loadProducts();
 })();
 </script>
