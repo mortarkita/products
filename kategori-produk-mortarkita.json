@@ -1,0 +1,70 @@
+{
+  "pengisi-nat": {
+    "name": "Pengisi Nat",
+    "products": [
+      "AM Epoxy",
+      "AM 51",
+      "AM 53",
+      "AM 58"
+    ]
+  },
+  "pelapis": {
+    "name": "Pelapis",
+    "products": [
+      "AM 102",
+      "AM 151",
+      "AM 152",
+      "AM 153",
+      "AM 180"
+    ]
+  },
+  "anti-bocor": {
+    "name": "Anti Bocor",
+    "products": [
+      "AM 115",
+      "AM 110",
+      "AM 100",
+      "AM 122",
+      "AM 612"
+    ]
+  },
+  "mortar": {
+    "name": "Mortar",
+    "products": [
+      "AM 82",
+      "AM 83",
+      "AM 86",
+      "AM 87",
+      "AM 88",
+      "AM 89"
+    ]
+  },
+  "perekat": {
+    "name": "Perekat",
+    "products": [
+      "AM 45",
+      "AM 48",
+      "AM 40",
+      "AM 42",
+      "AM 49",
+      "AM 41",
+      "AM 601"
+    ]
+  },
+  "aditif": {
+    "name": "Aditif",
+    "products": [
+      "AM 70",
+      "AM 76",
+      "AM 78"
+    ]
+  },
+  "bahan-lainnya": {
+    "name": "Bahan Lainnya",
+    "products": [
+      "Panel PVC",
+      "Pagar dan teralis custom",
+      "Pintu Aluminium Custom"
+    ]
+  }
+}
