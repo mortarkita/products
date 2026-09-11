@@ -5,7 +5,7 @@
   const CONFIG_FILE = "site-config.json";
   const DEFAULT_ID = "am86";
 
-  let WA_BASE = "https://wa.me/6285117110259";
+  let WA_BASE = "https://wa.me/628511143500";
 
   const $ = s => document.querySelector(s);
 
