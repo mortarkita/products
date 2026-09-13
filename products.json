@@ -1,5 +1,6 @@
 {
   "am82": {
+    "_comment": "START PRODUCT : AM 82",
     "code": "AM 82",
     "name": "Perekat Bata dan Plester",
     "image": "produk/am82.png",
@@ -18,9 +19,11 @@
       "Daya sebar": "Perekat bata merah: ± 1,2 m² / sak; Plester: 2–2,4 m² / sak"
     },
     "category": "mortar",
-    "show_in_all": true
+    "showAll": true,
+    "_comment_end": "END PRODUCT : AM 82"
   },
   "am83": {
+    "_comment": "START PRODUCT : AM 83",
     "code": "AM 83",
     "name": "Floor Hardener",
     "image": "produk/am83.png",
@@ -38,9 +41,11 @@
       "Daya sebar": "Light Traffic: ± 8,25 m² / sak 25 kg; Medium Traffic: ± 5 m² / sak 25 kg; Heavy Traffic: ± 3,6 m² / sak 25 kg"
     },
     "category": "mortar",
-    "show_in_all": true
+    "showAll": true,
+    "_comment_end": "END PRODUCT : AM 83"
   },
   "am86": {
+    "_comment": "START PRODUCT : AM 86",
     "code": "AM 86",
     "name": "Acian di atas Beton & Plester",
     "image": "produk/am86.png",
@@ -60,9 +65,11 @@
       "Daya sebar": "8–10 m² / sak 20 kg"
     },
     "category": "mortar",
-    "show_in_all": true
+    "showAll": true,
+    "_comment_end": "END PRODUCT : AM 86"
   },
   "am87": {
+    "_comment": "START PRODUCT : AM 87",
     "code": "AM 87",
     "name": "Acian Putih di atas Beton & Plester",
     "image": "produk/am87.png",
@@ -82,9 +89,11 @@
       "Daya sebar": "8–10 m² / sak 20 kg"
     },
     "category": "mortar",
-    "show_in_all": true
+    "showAll": true,
+    "_comment_end": "END PRODUCT : AM 87"
   },
   "am88": {
+    "_comment": "START PRODUCT : AM 88",
     "code": "AM 88",
     "name": "Acian di atas Plester",
     "image": "produk/am88.png",
@@ -103,9 +112,11 @@
       "Daya sebar": "16–20 m² / sak 40 kg"
     },
     "category": "mortar",
-    "show_in_all": true
+    "showAll": true,
+    "_comment_end": "END PRODUCT : AM 88"
   },
   "am89": {
+    "_comment": "START PRODUCT : AM 89",
     "code": "AM 89",
     "name": "Semen Anti Susut",
     "image": "produk/am89.png",
@@ -125,6 +136,7 @@
       "Daya sebar": "± 0,013 m² / sak 25 kg"
     },
     "category": "mortar",
-    "show_in_all": true
+    "showAll": true,
+    "_comment_end": "END PRODUCT : AM 89"
   }
 }

@@ -9,7 +9,7 @@
 <body>
 <header class="site-header">
   <div class="container navbar">
-    <a class="logo-box" href="index.html#beranda"><img src="assets/logo/logo-mortarkita.png" alt="Mortar Kita Logo"></a>
+    <a class="logo-box" href="index.html#beranda"><img src="assets/logo/logo-mortarkita.png" alt="Mortar Kita Logo" data-config-src="branding.logo_header"></a>
     <nav class="nav-menu" id="navMenu">
       <a href="index.html#beranda">BERANDA</a>
       <a href="index.html#produk">PRODUK</a>
@@ -20,7 +20,7 @@
     </nav>
     <a
   class="btn-contact"
-  href="https://wa.me/6285117110259"
+  href="#" id="headerWa" data-config-whatsapp
   target="_blank"
   rel="noopener">
   ☏ HUBUNGI KAMI
@@ -90,10 +90,10 @@
 
 <footer id="kontak">
   <div class="container footer-grid">
-    <div><div class="footer-logo"><img src="assets/logo/logo-mortarkita.png" alt="Mortar Kita"></div><p>Mortar Kita adalah solusi bahan bangunan berkualitas untuk menghasilkan pekerjaan yang kuat, rapi dan tahan lama.</p></div>
+    <div><div class="footer-logo"><img src="assets/logo/logo-mortarkita.png" alt="Mortar Kita" data-config-src="branding.logo_footer"></div><p data-config="company.description">Mortar Kita adalah solusi bahan bangunan berkualitas untuk menghasilkan pekerjaan yang kuat, rapi dan tahan lama.</p></div>
     <div><h4>PRODUK</h4><a href="index.html#produk">Acian & Plester</a><a href="index.html#produk">Perekat Bata</a><a href="index.html#produk">Floor Hardener</a><a href="index.html#produk">Grout</a></div>
     <div><h4>PERUSAHAAN</h4><a href="index.html#tentang">Tentang Kami</a><a href="index.html#solusi">Keunggulan</a><a href="index.html#artikel">Artikel & Tips</a></div>
-    <div><h4>KONTAK KAMI</h4><p>☎ 0851-1711-0259</p><p>✉ info@mortarkita.com</p><p>📍 Tangerang Selatan</p></div>
+    <div><h4>KONTAK KAMI</h4><p>☎ <span data-config="company.phone"></span></p><p>✉ <span data-config="company.email"></span></p><p>📍 <span data-config="company.address"></span></p></div>
   </div>
   <div class="footer-bottom">© 2026 Mortar Kita. All Rights Reserved.</div>
 </footer>
