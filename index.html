@@ -1107,14 +1107,25 @@ footer{
     let categoryProducts = {};
     let currentCategory = "all";
 
+    /* =========================================================
+       PENGATURAN TAMPIL DI "SEMUA PRODUK"
+       showAll=true  -> tampil di Semua Produk
+       showAll=false -> tidak tampil di Semua Produk
+
+       Catatan: filter kategori tetap menggunakan
+       kategori-produk-mortarkita.json. Jadi showAll=false
+       tidak menghapus produk dari data dan tidak otomatis
+       menyembunyikannya dari kategori tertentu.
+    ========================================================= */
+    function isShowAll(product){
+        return product && product.showAll === true;
+    }
+
     function renderProducts(products, category = currentCategory){
         const entries = Object.entries(products || {});
 
-        // "Semua Produk" hanya menampilkan produk yang secara eksplisit
-        // diberi show_in_all: true. Kategori lainnya ditentukan dari
-        // kategori-produk-mortarkita.json, bukan dari product.category.
         const filteredEntries = category === "all"
-            ? entries.filter(([id, product]) => product.show_in_all === true)
+            ? entries.filter(([id, product]) => isShowAll(product))
             : entries.filter(([id, product]) => {
                 const code = String(product.code || "").trim().toLowerCase();
                 return (categoryProducts[category] || new Set()).has(code);
