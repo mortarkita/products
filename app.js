@@ -141,6 +141,9 @@ const CATEGORY_LABELS = {
     "aditif":
         "Aditif",
 
+"Wood Panel Composite":
+        "WPC",
+
     "bahan-lainnya":
         "Bahan Lainnya"
 };
