@@ -94,7 +94,7 @@ const SITE_CONFIG = {
             "https://wa.me/628511143500",
 
         instagram:
-            "",
+            "https://www.instagram.com/mortarkita.id?stkn=Mnp5bTUxbTF5eTB4",
 
         tiktok:
             "",
