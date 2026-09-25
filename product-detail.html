@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detail Produk - Mortar Kita</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#222;
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo-box img{
+    width:145px;
+}
+
+.nav-menu{
+    display:flex;
+    gap:25px;
+}
+
+.nav-menu a{
+    font-size:13px;
+    font-weight:bold;
+}
+
+.nav-menu a:hover{
+    color:#f58220;
+}
+
+.btn-contact{
+    background:#f58220;
+    color:#fff;
+    padding:11px 17px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.menu-toggle{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+}
+
+/* DETAIL */
+
+.product-detail{
+    padding:80px 0;
+}
+
+.back-link{
+    display:inline-block;
+    color:#f58220;
+    font-weight:bold;
+    font-size:13px;
+    margin-bottom:30px;
+}
+
+.detail-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:start;
+}
+
+.detail-image{
+    min-height:500px;
+    background:#f7f7f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:35px;
+}
+
+.detail-image img{
+    width:100%;
+    height:450px;
+    object-fit:contain;
+}
+
+.detail-code{
+    color:#f58220;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.detail-content h1{
+    font-size:42px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.detail-intro{
+    color:#666;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.suitable{
+    background:#f7f7f7;
+    border-left:4px solid #f58220;
+    padding:15px 18px;
+    margin-bottom:25px;
+}
+
+.suitable strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+.detail-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.btn-wa{
+    background:#f58220;
+    color:#fff;
+    padding:13px 22px;
+    border-radius:4px;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.btn-home{
+    border:1px solid #ddd;
+    padding:13px 22px;
+    border-radius:4px;
+    font-weight:bold;
+    font-size:12px;
+}
+
+/* SECTIONS */
+
+.detail-section{
+    padding:70px 0;
+}
+
+.detail-section h2{
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature-card{
+    border:1px solid #eee;
+    padding:25px;
+}
+
+.feature-card .check{
+    color:#f58220;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.feature-card h3{
+    font-size:16px;
+}
+
+.description{
+    color:#555;
+    max-width:850px;
+}
+
+.spec-table{
+    max-width:850px;
+    border:1px solid #eee;
+}
+
+.spec-row{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    border-bottom:1px solid #eee;
+}
+
+.spec-row:last-child{
+    border-bottom:0;
+}
+
+.spec-row dt,
+.spec-row dd{
+    padding:15px 18px;
+}
+
+.spec-row dt{
+    font-weight:bold;
+    background:#f7f7f7;
+}
+
+.related{
+    background:#f7f7f7;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.related-card{
+    background:#fff;
+    border:1px solid #eee;
+    transition:.2s;
+}
+
+.related-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.related-img{
+    height:210px;
+    background:#f7f7f7;
+    padding:15px;
+}
+
+.related-img img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.related-body{
+    padding:18px;
+}
+
+.related-body span{
+    color:#f58220;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.related-body h3{
+    font-size:15px;
+    margin:5px 0 12px;
+}
+
+.related-body b{
+    font-size:11px;
+    color:#f58220;
+}
+
+/* FOOTER */
+
+footer{
+    background:#151515;
+    color:#fff;
+    padding:45px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.3fr 1.2fr;
+    gap:30px;
+}
+
+.footer-logo img{
+    width:145px;
+    margin-bottom:15px;
+}
+
+.footer-description{
+    color:#aaa;
+    font-size:12px;
+}
+
+.footer-column{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.footer-column h4{
+    font-size:12px;
+    margin-bottom:8px;
+}
+
+.footer-column a,
+.footer-column p{
+    color:#aaa;
+    font-size:12px;
+}
+
+.footer-column a:hover{
+    color:#f58220;
+}
+
+#socialLinks{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.social-link{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.social-icon{
+    width:24px;
+    height:24px;
+    border:1px solid #555;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+}
+
+.footer-bottom{
+    border-top:1px solid #333;
+    margin-top:35px;
+    padding-top:18px;
+    text-align:center;
+    color:#777;
+    font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-menu{
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        background:#fff;
+        display:none;
+        flex-direction:column;
+        padding:20px 4%;
+    }
+
+    .nav-menu.active{
+        display:flex;
+    }
+
+    .btn-contact{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:block;
+        cursor:pointer;
+    }
+
+    .detail-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .related-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .detail-content h1{
+        font-size:32px;
+    }
+
+    .detail-image{
+        min-height:350px;
+    }
+
+    .detail-image img{
+        height:320px;
+    }
+
+    .features-grid,
+    .related-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .spec-row{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+    <a
+        class="logo-box"
+        href="index.html#beranda">
+
+        <img
+            id="headerLogo"
+            src="assets/logo/logo-mortarkita.png"
+            alt="Mortar Kita">
+
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+
+        <a href="index.html#beranda">
+            BERANDA
+        </a>
+
+        <a href="index.html#produk">
+            PRODUK
+        </a>
+
+        <a href="index.html#solusi">
+            SOLUSI
+        </a>
+
+        <a href="index.html#artikel">
+            TIPS & ARTIKEL
+        </a>
+
+        <a href="index.html#tentang">
+            TENTANG KAMI
+        </a>
+
+        <a href="index.html#kontak">
+            KONTAK
+        </a>
+
+    </nav>
+
+    <a
+        href="index.html#kontak"
+        class="btn-contact">
+        ☏ HUBUNGI KAMI
+    </a>
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button">
+        ☰
+    </button>
+
+</div>
+</header>
+
+<main>
+
+<section class="product-detail">
+
+<div class="container">
+
+    <a
+        href="index.html#produk"
+        class="back-link">
+        ← KEMBALI KE PRODUK
+    </a>
+
+    <div
+        class="detail-grid"
+        id="productDetail">
+
+        <div class="detail-image">
+
+            <img
+                id="productImage"
+                src=""
+                alt="Produk">
+
+        </div>
+
+        <div class="detail-content">
+
+            <div
+                class="detail-code"
+                id="productCode">
+                -
+            </div>
+
+            <h1 id="productName">
+                Memuat produk...
+            </h1>
+
+            <p
+                class="detail-intro"
+                id="productIntro">
+                -
+            </p>
+
+            <div class="suitable">
+
+                <strong>
+                    Cocok untuk:
+                </strong>
+
+                <span id="productSuitable">
+                    -
+                </span>
+
+            </div>
+
+            <div class="detail-buttons">
+
+                <a
+                    id="consult"
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn-wa">
+                    KONSULTASI PRODUK
+                </a>
+
+                <a
+                    href="index.html#produk"
+                    class="btn-home">
+                    LIHAT PRODUK LAIN
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="detail-section">
+
+<div class="container">
+
+    <h2>
+        KEUNGGULAN PRODUK
+    </h2>
+
+    <div
+        class="features-grid"
+        id="advantages">
+    </div>
+
+</div>
+
+</section>
+
+<section class="detail-section">
+
+<div class="container">
+
+    <h2>
+        DESKRIPSI
+    </h2>
+
+    <div
+        class="description"
+        id="description">
+    </div>
+
+</div>
+
+</section>
+
+<section class="detail-section">
+
+<div class="container">
+
+    <h2>
+        SPESIFIKASI
+    </h2>
+
+    <dl
+        class="spec-table"
+        id="specification">
+    </dl>
+
+</div>
+
+</section>
+
+<section class="detail-section related">
+
+<div class="container">
+
+    <h2>
+        PRODUK LAINNYA
+    </h2>
+
+    <div
+        class="related-grid"
+        id="related">
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer id="kontak">
+
+<div class="container">
+
+<div class="footer-grid">
+
+    <div>
+
+        <div class="footer-logo">
+            <img
+                id="footerLogo"
+                src="assets/logo/logo-mortarkita.png"
+                alt="Mortar Kita">
+        </div>
+
+        <p
+            class="footer-description"
+            id="footerDescription">
+            Mortar Kita adalah solusi bahan bangunan
+            berkualitas untuk menghasilkan pekerjaan
+            yang kuat, rapi dan tahan lama.
+        </p>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h4>PRODUK</h4>
+
+        <a href="index.html#produk">
+            Semua Produk
+        </a>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h4>PERUSAHAAN</h4>
+
+        <a href="index.html#tentang">
+            Tentang Kami
+        </a>
+
+        <a href="index.html#solusi">
+            Keunggulan
+        </a>
+
+        <a href="index.html#artikel">
+            Artikel & Tips
+        </a>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h4>KONTAK KAMI</h4>
+
+        <p id="footerPhone">
+            ☎ 0851-1143-3500
+        </p>
+
+        <p id="footerEmail">
+            ✉ adminutamatju@gmail.com
+        </p>
+
+        <p id="footerAddress">
+            📍 Tangerang Selatan
+        </p>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h4>IKUTI KAMI</h4>
+
+        <div id="socialLinks"></div>
+
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+
+    © <span id="footerYear">2026</span>
+    Mortar Kita. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
