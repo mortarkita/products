@@ -97,7 +97,7 @@ const SITE_CONFIG = {
             "https://www.instagram.com/mortarkita.id/",
 
         tiktok:
-            "tiktok.com/@mortarkita",
+            "https://www.tiktok.com/@mortarkita",
 
         facebook:
             "",
