@@ -213,6 +213,67 @@ const PRODUCTS = {
             true
     },
 
+k01: {
+
+code: "K01",
+
+name:
+"Wood Plastic Composite K01",
+
+image:
+"produk/k01.png",
+
+intro:
+"Solusi elegan dan berkualitas untuk mempercantik ruangan Anda",
+
+suitable_for:
+"Dinding, interior & eksterior",
+
+features: [
+
+"Tampilan Elegan dan Modern",
+
+"Kuat dan Tahan Lama",
+
+"Tahan air dan lembab",
+
+"Mudah dipasang",
+
+"Cocok untuk segala ruangan"
+],
+
+description:
+"WPC berkualitas yang memiliki banyak motif, berbahan tebal yang detail.",
+
+specs: {
+
+"Material":
+"Wood Plastic Composite (WPC)",
+
+"Ketebalan":
+"± 20 mm",
+
+"Panjang":
+"± 2,9 meter",
+
+"Lebar":
+"± 15 cm",
+
+"Motif":
+"Beragam pilihan motif",
+
+"Penggunaan":
+"Dinding & dekorasi interior"
+},
+
+
+category:
+"wpc",
+
+showAll:
+true
+},
+
 
     am83: {
 
